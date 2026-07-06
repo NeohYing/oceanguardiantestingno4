@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Guardian | Quiz</title>
+
+    <link rel="icon" href="Image/oceanguardianlogo.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/quiz.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="main-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-text-wrapper">
+                    <span class="brand-main">OCEAN</span>
+                    <span class="brand-sub">GUARDIAN</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu-links">
+                <li><a href="index.html" class="menu-item">Home</a></li>
+                <li><a href="about.html" class="menu-item">About</a></li>
+                <li class="nav-dropdown-wrapper">
+                    <a href="#topics" class="menu-item dynamic-trigger">
+                        Topics <i class='bx bx-chevron-down toggle-arrow'></i>
+                    </a>
+                    <ul class="dropdown-panel">
+                        <li><a href="endangeredmarineanimals.html"><i class='bx bx-grid-alt'></i> Endangered Marine Species</a></li>
+                        <li><a href="#ecosystems"><i class='bx bx-water'></i> Marine Ecosystems</a></li>
+                        <li><a href="#species"><i class='bx bx-dna'></i> Threats</a></li>
+                        <li><a href="#threats"><i class='bx bx-shield-quarter'></i> Conservation & Action</a></li>
+                        <li><a href="#threats"><i class='bx bx-book'></i> Conservation Success Stories</a></li>
+                    </ul>
+                </li>
+                <li><a href="quiz.html" class="menu-item active">Quiz</a></li>
+                <li><a href="#faq" class="menu-item">Leaderboard</a></li>
+            </ul>
+
+            <div class="nav-action-group">
+                <a href="#quiz-anchor" class="nav-cta-block">Sign Up</a>
+                <button class="nav-search-trigger" aria-label="Search Site">
+                    <i class="bx bx-user-circle"></i>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+<!-- Hero -->
+
+<section class="quiz-hero">
+
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+
+    <div class="hero-content" data-aos="fade-up">
+
+        <h1>
+            🌊 Ocean Guardian Quiz
+        </h1>
+
+        <p>
+            Challenge yourself with exciting quizzes about marine life,
+            ocean conservation, and protecting our blue planet.
+        </p>
+
+        <div class="how-it-works">
+
+            <h3>How It Works</h3>
+
+            <div class="steps">
+
+                <div class="step">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span><strong>1.</strong> Choose Quiz</span>
+                </div>
+
+                <div class="step">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span><strong>2.</strong> Answer Questions</span>
+                </div>
+
+                <div class="step">
+                    <i class="fa-solid fa-medal"></i>
+                    <span><strong>3.</strong> Earn Your Badge</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quiz Cards -->
+
+<section class="quiz-section" id="quiz-cards">
+    <div class="quiz-grid">
+        <!-- Card 1 -->
+        <div class="quiz-card animals" onclick="startQuiz('animal')" data-aos="zoom-in">
+            <div class="card-icon">
+                🐢
+            </div>
+            <h2>Endangered Marine Animals</h2>
+            <p>
+                Discover endangered marine animals and learn how we can protect them.
+            </p>
+            <div class="card-info">
+                <span class="difficulty beginner">
+                    ⭐ Beginner
+                </span>
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    5 Questions
+                </span>
+            </div>
+            <button>
+                Start Quiz
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="quiz-card ecosystem" onclick="startQuiz('ecosystem')" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card-icon">
+                🪸
+            </div>
+            <h2>Marine Ecosystems</h2>
+            <p>
+                Explore coral reefs, ocean habitats, and the amazing marine ecosystem.
+            </p>
+            <div class="card-info">
+                <span class="difficulty medium">
+                    ⭐⭐ Medium
+                </span>
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    8 Questions
+                </span>
+            </div>
+            <button>
+                Start Quiz
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="quiz-card threats" onclick="startQuiz('threats')" data-aos="zoom-in" data-aos-delay="200">
+
+            <div class="card-icon">
+                ⚠️
+            </div>
+
+            <h2>Ocean Threats</h2>
+
+            <p>
+                Test your knowledge about pollution, climate change and overfishing.
+            </p>
+
+            <div class="card-info">
+
+                <span class="difficulty medium">
+                    ⭐⭐ Medium
+                </span>
+
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    8 Questions
+                </span>
+
+            </div>
+
+            <button>
+                Start Quiz
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="quiz-card action" onclick="startQuiz('action')" data-aos="zoom-in" data-aos-delay="300">
+
+            <div class="card-icon">
+                🌍
+            </div>
+
+            <h2>Taking Action</h2>
+
+            <p>
+                Learn simple ways everyone can help protect the oceans every day.
+            </p>
+
+            <div class="card-info">
+
+                <span class="difficulty hard">
+                    ⭐⭐⭐ Hard
+                </span>
+
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    7 Questions
+                </span>
+
+            </div>
+
+            <button>
+                Start Quiz
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Quiz -->
+
+<section id="quizBox" class="quiz-container hidden">
+
+    <div class="quiz-header">
+
+        <div>
+
+            <span id="questionCounter">
+                Question 1 / 10
+            </span>
+
+            <div class="progress">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="question-box">
+
+        <h2 id="question"></h2>
+
+        <div id="answers"></div>
+
+        <div id="explanation" class="explanation hidden"></div>
+
+        <button id="nextBtn">
+            Next Question
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+    <p>
+        © 2026 Ocean Guardian • All rights reserved<br>
+        <a class="footer-credit" href="credits.html">Credits</a>
+    </p>
+</footer>
+
+<!-- JS -->
+
+<script src="Javascript/quiz.js"></script>
+
+<!-- AOS -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:800,
+    once:true
+});
+</script>
+
+</body>
+</html>
